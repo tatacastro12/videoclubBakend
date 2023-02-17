@@ -24,3 +24,7 @@ app.use("/movies",moviesRoutes);
 app.listen(PORT, () =>{
     console.log("the server is listening on port " + PORT);
 });
+
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:'true'}))

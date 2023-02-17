@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
 });
 
 // Manejador de petición POST en la ruta raíz ('/')
-router.post("/", (req, res) => {
+router.post("/Agregarmovie", (req, res) => {
   movies.create(req.body, (err, result) => { // creamos un nuevo documento en la colección Todo con los datos en el cuerpo de la petición
     if (err) throw new Error(err); // si hay un error, lo lanzamos
     res.json(result); // enviamos la respuesta en formato JSON con el documento creado
